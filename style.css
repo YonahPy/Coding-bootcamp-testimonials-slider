@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+.container {
+
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.gallery-wrapper {
+    background-image: url('coding-bootcamp-testimonials-slider-master/images/pattern-bg.svg');
+}
+
+.gallery {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    padding-top: 60px;
+    background-image: url('coding-bootcamp-testimonials-slider-master/images/pattern-bg.svg');
+    background-position-y: 5px;
+    background-position-x:20px;
+    background-repeat: no-repeat;
+    background-size: 400px;
+}
+
+.slide {
+    min-width: 100%; /* Cada slide ocupa toda a largura do container */
+    display: none; /* Inicialmente, esconde todos os slides */
+}
+
+.slide.active {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    gap: 52px;
+    padding-bottom: 30px;
+    
+
+}
+
+.slide img {
+    width: 60%;
+    height: 300px;
+    border-radius: 10px;
+    
+}
+
+.slide p {
+    padding: 40px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: hsl(240, 38%, 20%);
+    margin-bottom: -60px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    bottom: 320px;
+    left: 220px;
+    width: 17%;
+    
+    padding: 10px 0px;
+    background-color: rgba(0, 0, 0, 0); 
+}
+
+.prev,
+.next {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    
+}
+.next{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px;
+    margin-right: 65px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.342);
+}
+.prev{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 10px;
+    box-shadow:-1px 1px 1px rgba(0, 0, 0, 0.479);
+}
